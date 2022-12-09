@@ -1,7 +1,10 @@
 # simple translator (st)
 nodejs cli translator app, uses some packages.
 
-usage:
+usage: 
+
+ctrl+c copy to clipboard 
+then
 ctrl+lalt+q for translating words.
 ctrl+lalt+e for translating sentences.
 
