@@ -5,6 +5,12 @@ import clipboard from 'clipboardy';
 import fs from 'fs'
 import { exit } from 'process';
 
+const env = process.env;
+let language = env.LANG
+language = language.substring(0,2)
+//You can change language if you don't want to translate system default language. Use ISO 639-1 codes for this.
+//Example: language = "en"
+
 let keycodes = []
 io.start();
 
@@ -91,7 +97,7 @@ function notify(message){
 
 async function transWord(message){
     try{
-        let translated = await translate(message, { to: 'tr'});
+        let translated = await translate(message, { to: language});
         notify(message + " = " + translated.text)
         if(message != translated.text){
             items.set(message,translated.text)
@@ -102,7 +108,7 @@ async function transWord(message){
         }
     }
     catch{
-        let translated = await translate(message, { to: 'tr' , client: 'gtx'});
+        let translated = await translate(message, { to: language , client: 'gtx'});
         notify(message + " = " + translated.text)
         if(message != translated.text){
             items.set(message,translated.text)
@@ -116,11 +122,11 @@ async function transWord(message){
 
 async function trans(message){
     try{
-        let translated = await translate(message, { to: 'tr'});
+        let translated = await translate(message, { to: language});
         notify(translated.text)
         console.log(translated.text)
     }catch{
-        let translated = await translate(message, { to: 'tr' , client: 'gtx'});
+        let translated = await translate(message, { to: language , client: 'gtx'});
         notify(translated.text)
         console.log(translated.text)
     }
