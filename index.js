@@ -1,4 +1,3 @@
-//const io = require('iohook2');
 import io from 'iohook2';
 import notifier from 'node-notifier';
 import translate from 'google-translate-api-x';
@@ -30,13 +29,13 @@ function mergeFiles(argts){
     const json = JSON.stringify(Object.fromEntries(firstFileItems))
     if(argts[5] != "-f"){
         fs.writeFileSync("merged_tr",json,"utf8")
-        console.log("Files merged. merged_tr created.");
+        console.log("INFO: Files merged. merged_tr created.");
         exit()
 
     }
     else{
         fs.writeFileSync("tr",json,"utf8")
-        console.log("Files merged. tr file overwritten.");
+        console.log("INFO: Files merged. tr file overwritten.");
         exit()
     }
     
@@ -45,7 +44,6 @@ function mergeFiles(argts){
 function argHandle(){
     const args = process.argv
     if(args.includes("--merge")){
-        //console.log(args[4])
         mergeFiles(args)
     }
     if(args.includes("--help")){
@@ -60,7 +58,7 @@ async function writeFile(){
     const json = JSON.stringify(Object.fromEntries(items))
     fs.writeFile("tr",json,(err,data) => {
         if(!err){
-            console.log("Written to the file!")
+            console.log("INFO: Written to the file!")
         }
         else{
             console.log(err)
