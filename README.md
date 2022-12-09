@@ -1,5 +1,5 @@
 # simple translator (st)
-nodejs cli translator app, uses some packages.
+nodejs cli translator app, uses some packages. it's useful if you are read a lot of from pdf file, or lazy just like me.
 <br />
 <br />
 
