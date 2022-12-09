@@ -59,7 +59,8 @@ if there is no tr file, it will create.
 merging: <br />
 
 ```
-you can merge 2 tr(anslate) files, usage: ./node index.js --merge toFile fromFile
+you can merge 2 tr(anslate) files. usage: ./node index.js --merge toFile fromFile -f
+you can create new tr file in directory from 2 tr(anslate) files, usage: ./node index.js --merge toFile fromFile
 ```
 
 <br />
