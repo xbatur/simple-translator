@@ -1,7 +1,7 @@
 # simple translator (st)
 nodejs cli translator app, uses some packages. it's useful if you are read a lot of from pdf file, or lazy just like me. <br />
 simple translator doesn't have any graphical user interface, if you want to translate some text, copy it, then press the right buttons (you can see there bottom in the readme.md) and it will send translated word via notify, be sure your notifications is active, especially in windows. <br />
-it will translate to system's default language, you can change this in index.js via changing language variable.
+it will translate to system's default language, you can change this in index.js via language variable.
 <br />
 <br />
 
