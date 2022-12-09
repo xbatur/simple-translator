@@ -1,0 +1,21 @@
+{
+  "name": "translator",
+  "version": "1.0.0",
+  "description": "basic translator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "clitranslator"
+  ],
+  "author": "xbatur",
+  "license": "ISC",
+  "dependencies": {
+    "clipboardy": "^3.0.0",
+    "google-translate-api-x": "^10.4.2",
+    "iohook2": "^1.0.6",
+    "node-notifier": "^10.0.1"
+  },
+  "type": "module"
+}
